@@ -1,0 +1,265 @@
+$themeColor: #f9b530;
+$seconColor: #202020;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  color: $seconColor;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  position: relative;
+}
+
+// for background
+.indexYellow {
+  position: absolute;
+  top: 2vh;
+  right: 0;
+  z-index: -1;
+}
+.indexBlack {
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  z-index: -1;
+}
+.navActive {
+  border-bottom: 5px solid $themeColor;
+}
+.resumeBlack {
+  position: absolute;
+  top: 35vh;
+  right: 0;
+  z-index: -1;
+}
+.contactBlack {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+// hrader and navbar
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  align-items: center;
+  box-shadow: 0 10px 15px -10px #e0e0e0db;
+  background-color: white;
+  .menu {
+    padding: 12px;
+    .fa-bars {
+      font-size: 1.5rem;
+    }
+  }
+
+  .links {
+    a {
+      padding: 0px 0.5rem;
+      img {
+        width: 30px;
+      }
+    }
+  }
+}
+.navbar-horizontal {
+  display: none;
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    li {
+      font-size: 1rem;
+      padding: 0px 1rem;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.navbar-vertical {
+  background-color: white;
+  height: 0;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+  .navbar-nav {
+    margin-top: 4px;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin: 0 8px;
+      padding: 4px 0;
+      border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+      a {
+        padding: 4px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.active {
+  height: 135px;
+}
+
+// for main
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10rem 10rem;
+  justify-content: center;
+
+  section.left {
+    padding: 0 8rem;
+    h1 {
+      color: $themeColor;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  section.right {
+    img {
+      width: 20rem;
+    }
+  }
+
+  section.picture {
+    position: relative;
+    flex: 1 1 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5rem;
+    .resumePic {
+      max-width: 60%;
+      position: absolute;
+    }
+    .resumeYellow {
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
+
+  section.table {
+    flex: 3 1 700px;
+    margin-left: 5rem;
+    margin-top: -5rem;
+    table {
+      border-collapse: collapse;
+      tr {
+        border-bottom: 1px solid $seconColor;
+        transition: all 0.2s ease;
+        td {
+          padding: 1rem;
+        }
+        &:hover {
+          background: #ffd582;
+        }
+      }
+    }
+  }
+  section.contact {
+    margin-top: -2rem;
+    padding-right: 5rem;
+  }
+  section.form {
+    background-color: #f9b63045;
+    margin-top: -2rem;
+    form {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div {
+        padding: 0 0 0.5rem 0;
+        input,
+        textarea {
+          width: 20vw;
+          background-color: transparent;
+          border: none;
+          border-bottom: #202020 1px solid;
+        }
+      }
+      button {
+        width: 30%;
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: $themeColor;
+      }
+    }
+  }
+}
+
+// for mobile
+@media (min-width: 835px) {
+  .menu {
+    display: none;
+  }
+
+  .navbar-horizontal {
+    display: flex;
+    order: -1;
+    .navbar-nav {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      a {
+        padding: 12px;
+      }
+    }
+  }
+  .navbar-vertical {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .indexBlack,
+  .resumeBlack,
+  .contactBlack {
+    visibility: hidden;
+  }
+
+  main {
+    section.left {
+      padding: 0px 8rem;
+      h1 {
+        color: $seconColor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    flex-direction: column;
+    section.left {
+      padding: 0px;
+    }
+    section.picture {
+      .resumeYellow {
+        visibility: hidden;
+      }
+    }
+    section.contact {
+      padding-right: 0rem;
+    }
+    section.form {
+      margin-top: 10rem;
+    }
+  }
+}
