@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="YiXuan(Boni)Tao" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="這是Boni的個人網站。" />
+    <base target="_self" />
+    <title>我的履歷 | Boni 網頁前端工程師</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <img class="contactBlack" src="ICONS/bg-black-3.svg" alt="" />
+    <header>
+      <a class="menu" href="#" role="button">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <!-- links for facebook, instagram and github -->
+      <div class="links">
+        <a href="">
+          <img
+            src="./ICONS/facebook.svg"
+            alt="facebook"
+            title="facebook"
+            role="button"
+          />
+        </a>
+        <a href="">
+          <img
+            src="./ICONS/instagram.svg"
+            alt="instagram"
+            title="instagram"
+            role="button"
+          />
+        </a>
+        <a href="">
+          <img
+            src="./ICONS/github-brands 1.svg"
+            alt="github"
+            title="github"
+            role="button"
+          />
+        </a>
+      </div>
+      <nav class="navbar-horizontal">
+        <ul class="navbar-nav">
+          <li><a href="index.html" role="button">首頁</a></li>
+          <li><a href="resume.html" role="button">我的履歷</a></li>
+          <li class="navActive">
+            <a href="contact.html" role="button">聯絡方式</a>
+          </li>
+          <li>
+            <a href="/Taiwan-Project/index.html" role="button"
+              >Taiwan Project</a
+            >
+          </li>
+          <li>
+            <a href="/Hawaii-Project/index.html" role="button"
+              >Hawaii Project</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <nav class="navbar-vertical">
+      <ul class="navbar-nav">
+        <li><a href="index.html" role="button">首頁</a></li>
+        <li><a href="resume.html" role="button">我的履歷</a></li>
+        <li class="navActive">
+          <a href="contact.html" role="button">聯絡方式</a>
+        </li>
+        <li>
+          <a href="/Taiwan-Project/index.html" role="button">Taiwan Project</a>
+        </li>
+        <li>
+          <a href="/Hawaii-Project/index.html" role="button">Hawaii Project</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section class="contact">
+        <div class="content">
+          <h2 style="color: #f9b530;">聯絡方式</h2>
+          <h4>電話：0933-456-789</h4>
+          <h4>Email：boni@fakemail.com</h4>
+          <h4>聯絡時間：一～六，08:00~19:00</h4>
+          <h4>其他聯絡方式 : Facebook、Instagram</h4>
+        </div>
+      </section>
+      <section class="form">
+        <form>
+          <div>
+            <label for="name">姓名：</label>
+            <br />
+            <input type="text" name="name" id="" />
+          </div>
+          <div>
+            <label for="email">電子郵件：</label>
+            <br />
+            <input type="email" name="email" id="" />
+          </div>
+          <div>
+            <label for="name">電話：</label>
+            <br />
+            <input type="text" name="phone" id="" />
+          </div>
+          <div>
+            <label for="need">留言給我：</label>
+            <br />
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <button type="submit">送出</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

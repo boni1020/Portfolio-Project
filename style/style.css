@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #202020;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+}
+
+.indexYellow {
+  position: absolute;
+  top: 2vh;
+  right: 0;
+  z-index: -1;
+}
+
+.indexBlack {
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  z-index: -1;
+}
+
+.navActive {
+  border-bottom: 5px solid #f9b530;
+}
+
+.resumeBlack {
+  position: absolute;
+  top: 35vh;
+  right: 0;
+  z-index: -1;
+}
+
+.contactBlack {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  align-items: center;
+  box-shadow: 0 10px 15px -10px rgba(224, 224, 224, 0.8588235294);
+  background-color: white;
+}
+header .menu {
+  padding: 12px;
+}
+header .menu .fa-bars {
+  font-size: 1.5rem;
+}
+header .links a {
+  padding: 0px 0.5rem;
+}
+header .links a img {
+  width: 30px;
+}
+
+.navbar-horizontal {
+  display: none;
+}
+.navbar-horizontal .navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.navbar-horizontal .navbar-nav li {
+  font-size: 1rem;
+  padding: 0px 1rem;
+}
+.navbar-horizontal .navbar-nav li a {
+  text-decoration: none;
+}
+
+.navbar-vertical {
+  background-color: white;
+  height: 0;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+}
+.navbar-vertical .navbar-nav {
+  margin-top: 4px;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar-vertical .navbar-nav li {
+  margin: 0 8px;
+  padding: 4px 0;
+  border-top: 1px solid hsla(0deg, 0%, 100%, 0.5);
+}
+.navbar-vertical .navbar-nav li a {
+  padding: 4px;
+  text-decoration: none;
+}
+
+.active {
+  height: 135px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10rem 10rem;
+  justify-content: center;
+}
+main section.left {
+  padding: 0 8rem;
+}
+main section.left h1 {
+  color: #f9b530;
+  font-size: 2rem;
+}
+main section.left p {
+  font-size: 1rem;
+}
+main section.right img {
+  width: 20rem;
+}
+main section.picture {
+  position: relative;
+  flex: 1 1 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5rem;
+}
+main section.picture .resumePic {
+  max-width: 60%;
+  position: absolute;
+}
+main section.picture .resumeYellow {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+main section.table {
+  flex: 3 1 700px;
+  margin-left: 5rem;
+  margin-top: -5rem;
+}
+main section.table table {
+  border-collapse: collapse;
+}
+main section.table table tr {
+  border-bottom: 1px solid #202020;
+  transition: all 0.2s ease;
+}
+main section.table table tr td {
+  padding: 1rem;
+}
+main section.table table tr:hover {
+  background: #ffd582;
+}
+main section.contact {
+  margin-top: -2rem;
+  padding-right: 5rem;
+}
+main section.form {
+  background-color: rgba(249, 182, 48, 0.2705882353);
+  margin-top: -2rem;
+}
+main section.form form {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section.form form div {
+  padding: 0 0 0.5rem 0;
+}
+main section.form form div input,
+main section.form form div textarea {
+  width: 20vw;
+  background-color: transparent;
+  border: none;
+  border-bottom: #202020 1px solid;
+}
+main section.form form button {
+  width: 30%;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #f9b530;
+}
+
+@media (min-width: 835px) {
+  .menu {
+    display: none;
+  }
+  .navbar-horizontal {
+    display: flex;
+    order: -1;
+  }
+  .navbar-horizontal .navbar-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .navbar-horizontal .navbar-nav a {
+    padding: 12px;
+  }
+  .navbar-vertical {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .indexBlack,
+.resumeBlack,
+.contactBlack {
+    visibility: hidden;
+  }
+  main section.left {
+    padding: 0px 8rem;
+  }
+  main section.left h1 {
+    color: #202020;
+  }
+}
+@media screen and (max-width: 992px) {
+  main {
+    flex-direction: column;
+  }
+  main section.left {
+    padding: 0px;
+  }
+  main section.picture .resumeYellow {
+    visibility: hidden;
+  }
+  main section.contact {
+    padding-right: 0rem;
+  }
+  main section.form {
+    margin-top: 10rem;
+  }
+}/*# sourceMappingURL=style.css.map */
